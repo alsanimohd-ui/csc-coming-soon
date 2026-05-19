@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Copy, CheckCircle2, ChevronRight, Sparkles } from 'lucide-react';
 
@@ -125,7 +125,7 @@ export default function App() {
                 { label: 'Hours', value: timeLeft.hours },
                 { label: 'Minutes', value: timeLeft.minutes },
                 { label: 'Seconds', value: timeLeft.seconds },
-              ].map((item, idx) => (
+              ].map((item) => (
                 <div key={item.label} className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md relative overflow-hidden group/timer">
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover/timer:opacity-100 transition-opacity duration-500" />
                   <span className="text-4xl md:text-5xl font-bold font-mono text-white mb-2 tracking-tighter shadow-blue-500/20 drop-shadow-md">
